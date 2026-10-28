@@ -1,3 +1,5 @@
+// Reverse String:
+
 // const arr = [1, -1, 2, 3];
 
 // let sum = 0;
@@ -41,6 +43,8 @@
 // console.log(sum);
 
 
+
+//Max Character:
 
 // Create a Character Map that counts the occurrences of each character in a string:
   // 1. Define the input string.
@@ -92,16 +96,17 @@
 
 // Create a Character Map that counts the occurrences of each character in a string using the Map object:
 
-const str = 'Simplified !';
-const charMap = new Map();
+// const str = 'Simplified !';
+// const charMap = new Map();
 
-for (const char of str) {
-  const count = charMap.get(char);
-  charMap.set(char, count + 1 || 1);
-}
+// for (const char of str) {
+//   const count = charMap.get(char);
+//   charMap.set(char, count + 1 || 1);
+// }
 
-for (const [char, count] of charMap) {
-  console.log(char, count);
-}
+// for (const [char, count] of charMap) {
+//   console.log(char, count);
+// }
 
 // console.log(charMap);
+

@@ -110,3 +110,22 @@
 
 // console.log(charMap);
 
+
+
+// Array Chunk:
+
+const arr = [0, 1, 2, 3, 4];
+const size = 2;
+
+// How to loop through an array in increments of a given size:
+
+// for (let i = 0; i < arr.length; i += size) {
+//   console.log(i);
+// }
+
+
+// How to create a subarray that has a length of a given size using the slice method:
+
+console.log(arr.slice(0, 2));
+console.log(arr.slice(2, 4));
+console.log(arr.slice(4, 6));

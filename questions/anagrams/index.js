@@ -69,6 +69,7 @@ const cleanString = (str) => {
 
 module.exports = anagrams;
 
+
 // .toLowerCase() - converts the string to lower case
 // .replace(" ", "") - removes all spaces from the string
 // .split("") - splits the string into an array of characters

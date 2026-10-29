@@ -114,8 +114,8 @@
 
 // Array Chunk:
 
-const arr = [0, 1, 2, 3, 4];
-const size = 2;
+// const arr = [0, 1, 2, 3, 4];
+// const size = 2;
 
 // How to loop through an array in increments of a given size:
 
@@ -126,6 +126,17 @@ const size = 2;
 
 // How to create a subarray that has a length of a given size using the slice method:
 
-console.log(arr.slice(0, 2));
-console.log(arr.slice(2, 4));
-console.log(arr.slice(4, 6));
+// console.log(arr.slice(0, 2));
+// console.log(arr.slice(2, 4));
+// console.log(arr.slice(4, 6));
+
+
+
+// Capitalize:
+
+const str = 'frontend';
+
+const firstLetter = str[0].toUpperCase();   // How to capitalize the first letter of a string
+const restOfString = str.slice(1);   // How to target the rest of the string after the first letter
+
+console.log(firstLetter, restOfString);

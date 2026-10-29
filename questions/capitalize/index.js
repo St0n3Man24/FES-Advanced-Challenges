@@ -58,6 +58,8 @@ module.exports = capitalize;
 // module.exports = capitalize;
 
 
-// .toLowerCase() - converts the string to lower case
+// .toUpperCase() - converts the string to upper case
 // .split("") - splits the string into an array of characters
 // .join("") - joins the sorted array of characters back into a string
+// .push() - adds one or more elements to the end of an array and returns the new length of the array
+// .slice() - returns a copy of a portion of an array or string into a new array or string, targeting the specified start and end indices

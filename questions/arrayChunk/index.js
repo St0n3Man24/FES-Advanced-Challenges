@@ -29,3 +29,8 @@ const arrayChunk = (array, size) => {
 };
 
 module.exports = arrayChunk;
+
+
+// .slice() - returns a copy of a portion of an array or string into a new array or string, targeting the specified start and end indices
+// .join("") - joins the sorted array of characters back into a string
+// .push() - adds one or more elements to the end of an array and returns the new length of the array

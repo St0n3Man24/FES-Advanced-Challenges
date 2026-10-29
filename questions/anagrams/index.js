@@ -71,7 +71,8 @@ module.exports = anagrams;
 
 
 // .toLowerCase() - converts the string to lower case
-// .replace(" ", "") - removes all spaces from the string
+// .replaceAll(" ", "") - removes all spaces from the string
+// .replace() - replaces a specified value with another value in a string
 // .split("") - splits the string into an array of characters
 // .sort() - sorts the array of characters in alphabetical order
 // .join("") - joins the sorted array of characters back into a string

@@ -24,3 +24,11 @@ const reverseInteger = (int) => {
 };
 
 module.exports = reverseInteger;
+
+
+// .toString() - converts the integer to a string
+// .split('') - splits the string into an array of characters
+// .reverse() - reverses the order of the array
+// .join('') - joins the array back into a string
+// parseInt() - converts the string back to an integer
+// Math.sign() - returns the sign of a number, indicating whether the number is positive, negative or zero

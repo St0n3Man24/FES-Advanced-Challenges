@@ -72,3 +72,7 @@ const reverseString = (str) => {
 };
 
 module.exports = reverseString;
+
+
+// .split('') - splits the string into an array of characters
+// .reduce() - reduces the array into a single value

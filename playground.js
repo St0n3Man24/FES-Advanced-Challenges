@@ -44,6 +44,18 @@
 
 
 
+//ReverseInteger:
+
+// const reverseInteger = (int) => {
+//   const reversed = int.toString().split('').reverse().join('');
+
+//   return parseInt(reversed) * Math.sign(int);
+// };
+
+// console.log(reverseInteger(-1234));
+
+
+
 //Max Character:
 
 // Create a Character Map that counts the occurrences of each character in a string:
@@ -134,9 +146,9 @@
 
 // Capitalize:
 
-const str = 'frontend';
+// const str = 'frontend';
 
-const firstLetter = str[0].toUpperCase();   // How to capitalize the first letter of a string
-const restOfString = str.slice(1);   // How to target the rest of the string after the first letter
+// const firstLetter = str[0].toUpperCase();   // How to capitalize the first letter of a string
+// const restOfString = str.slice(1);   // How to target the rest of the string after the first letter
 
-console.log(firstLetter, restOfString);
+// console.log(firstLetter, restOfString);

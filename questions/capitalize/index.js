@@ -1,3 +1,5 @@
+/* COURSE INSTRUCTIONS */
+
 /** Given a sentence, capitalize the first letter of each word and 
  * return the capitalized sentence.
  *
@@ -8,6 +10,9 @@
  */
 
 
+/* PERSONAL INSTRUCTIONS */
+
+/* Solution #1 - Instructions */
 // How to target and capitalize the first letter of each word in a string:
 // 1. Create an empty array to hold the capitalized words.
   // const result = [];
@@ -20,17 +25,14 @@
 // 5. Return the updated results array variable (result) and since it's still in array format, use the join method to conver it back to an string
   // return result.join(" ");
 
+/* Solution #1 - Code */
 const capitalize = (str) => {
-  const result = [];
-  for (let word of str.split(" ")) {
-    const capitalizedWord = word[0].toUpperCase() + word.slice(1);
-    result.push(capitalizedWord);
-  }
-  return result.join(" ");
+  
 };
 
 module.exports = capitalize;
 
+/* Solution #2 - Instructions */
 // How to solve this problem using the brute force method:
 // 1. Create an string variable (result) that can change later that targets the first letter of the string (str) and makes it uppercase using the toUpperCase method
   // let result = str[0].toUpperCase();
@@ -42,6 +44,38 @@ module.exports = capitalize;
   // else { result += str[i]; }
 // 5. Return the updated string (result)
 
+/* Solution #2 - Code */
+// const capitalize = (str) => {
+  // 
+// };
+
+// module.exports = capitalize;
+
+
+/* NOTES */
+
+// .toUpperCase() - converts the string to upper case
+// .split("") - splits the string into an array of characters
+// .join("") - joins the sorted array of characters back into a string
+// .push() - adds one or more elements to the end of an array and returns the new length of the array
+// .slice() - returns a copy of a portion of an array or string into a new array or string, targeting the specified start and end indices
+
+
+/* SOLUTIONS */
+
+/* Solution #1 - Code */
+// const capitalize = (str) => {
+//   const result = [];
+//   for (let word of str.split(" ")) {
+//     const capitalizedWord = word[0].toUpperCase() + word.slice(1);
+//     result.push(capitalizedWord);
+//   }
+//   return result.join(" ");
+// };
+
+// module.exports = capitalize;
+
+/* Solution #2 - Code */
 // const capitalize = (str) => {
 //   let result = str[0].toUpperCase();
 
@@ -56,10 +90,3 @@ module.exports = capitalize;
 // };
 
 // module.exports = capitalize;
-
-
-// .toUpperCase() - converts the string to upper case
-// .split("") - splits the string into an array of characters
-// .join("") - joins the sorted array of characters back into a string
-// .push() - adds one or more elements to the end of an array and returns the new length of the array
-// .slice() - returns a copy of a portion of an array or string into a new array or string, targeting the specified start and end indices

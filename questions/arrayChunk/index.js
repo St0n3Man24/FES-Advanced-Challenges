@@ -1,3 +1,5 @@
+/* COURSE INSTRUCTIONS */
+
 /** Given an array along with a chunk size, return a new array that contains 
  * many subarrays where the length of each subarray is length `size`. 
  *
@@ -7,6 +9,10 @@
  * arrayChunk([0, 1, 2, 3, 4], 3) === [[0, 1, 2], [3, 4]]
  */
 
+
+/* PERSONAL INSTRUCTIONS */
+
+/* Solution #1 - Instructions */
 // How to chunk an array:
 // 1. Create an empty 'chunkedArray' to hold the subarrays
   // (const chunkedArray = [];) this is creating an empty array to hold the subarrays
@@ -18,19 +24,32 @@
   // (chunkedArray.push(subarray)) this is pushing the subarray into the chunked array
 // finally, return the chunked array which will contain all the subarrays of the specified size
 
+/* Solution #1 - Code */
 const arrayChunk = (array, size) => {
-  const chunkedArray = [];
-
-  for (let i = 0; i < array.length; i += size) {
-    const subarray = array.slice(i, i + size);
-    chunkedArray.push(subarray);
-  }
-  return chunkedArray;
+  
 };
 
 module.exports = arrayChunk;
 
 
+/* NOTES */
+
 // .slice() - returns a copy of a portion of an array or string into a new array or string, targeting the specified start and end indices
 // .join("") - joins the sorted array of characters back into a string
 // .push() - adds one or more elements to the end of an array and returns the new length of the array
+
+
+/* SOLUTIONS */
+
+/* Solution #1 - Code */
+// const arrayChunk = (array, size) => {
+//   const chunkedArray = [];
+
+//   for (let i = 0; i < array.length; i += size) {
+//     const subarray = array.slice(i, i + size);
+//     chunkedArray.push(subarray);
+//   }
+//   return chunkedArray;
+// };
+
+// module.exports = arrayChunk;

@@ -36,13 +36,14 @@
 
 /* Solution #1a - Code */
 // const reverseString = (str) => {
-  // 
+//   return str.split('').reverse().join('');
 // }
+
 // module.exports = reverseString;
 
 /* Solution #1b - Code */
 // const reverseString = (str) => {
-  // 
+  
 // }
 
 // module.exports = reverseString;
@@ -54,14 +55,16 @@
   // str.split('')
   // Ex: 'David' => ['D', 'a', 'v', 'i', 'd']
 // 2. Reduce the array using the .reduce(() => ()) method
-  // First, we want to pass accumulator in the parameter of the reduce callback which is the accumulated value that is returned after each iteration. It starts as the first element/character of the array.
-  // Second, we want to pass currentValue into the parameter of the reduce callback which is the current element/character being processed in the array
-  // Third, within the return value of the callback we put the currentValue before adding the accumulator to effectively build the reversed string.
+  // First, we want to pass accumulator in the argument of the reduce callback which is the accumulated value that is returned after each iteration. It starts as the first element/character of the array.
+  // Second, we want to pass currentValue into the argument of the reduce callback which is the current element/character being processed in the array
+  // Third, within the return value of the callback we pass the currentValue before adding the accumulator to effectively build the reversed string, then pass an empty string as the initial value for the accumulator which acts as a starting point for the accumulation.
 // 3. Make sure a return was added before the string (str)
 
 /* Solution #2 - Code */
 // const reverseString = (str) => {
-  // 
+//   return str
+//     .split('')
+//     .reduce((accumulator, currentValue) => (currentValue + accumulator), '');
 // }
 
 // module.exports = reverseString;

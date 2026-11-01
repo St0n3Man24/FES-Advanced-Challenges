@@ -26,7 +26,7 @@
     // let maxChar = '';
   // 4. Counting Characters: create a for...of loop that iterates over each character in the string (str) and have the variable (char) take on the value of each character in the string.
     // for (let char of str) { ... }
-  // 5. Within the for...of loop, we want to update the count of each character (char) in the charMap object. Using the OR operator, if charMap[char] already exists (meaning the character has been encountered before), it increments by 1 (charMap[char] + 1). If charMap[char] does not exist (meaning the character is being encountered for the first time) it sets the count to 1.
+  // 5. Within the for...of loop, we want to update the count of each character (char) in the empty (charMap) object. Using the OR operator, if charMap[char] already exists (meaning the character has been encountered before), it increments by 1 (charMap[char] + 1). If charMap[char] does not exist (meaning the character is being encountered for the first time) it sets the count to 1.
     // charMap[char] = charMap[char] + 1 || 1;
   // 6. Finding the Max Character: Create a for...in loop that iterates over each key (character) in the character Map object (charMap) and have the variable (char) take on the property name of each key in the charMap object
     // for (let char in charMap) { ... }
@@ -39,19 +39,59 @@
     // return maxChar;
 
 
-/* Solution #1a - Code */
-const maxCharacter = (str) => {
-  const charMap = {};
-  let max = 0;
-  let maxChar = '';
+/* Solution #1 - Code */
+// const maxCharacter = (str) => {
+//   const charMap = {};
+//   let max = 0;
+//   let maxChar = '';
 
-  for (let char of str) {
-    charMap[char] = charMap[char] + 1 || 1;
+//   for (let char of str) {
+//     charMap[char] = charMap[char] + 1 || 1;
+//   }
+
+//   for (let char in charMap) {
+//     if (charMap[char] > max) {
+//       max = charMap[char];
+//       maxChar = char;
+//     }
+//   }
+//   return maxChar;
+// };
+
+// module.exports = maxCharacter;
+
+/* Solution #2 - Instructions */
+// Use Map object to create a character map:
+  // 1. Create variable that will store the character Map object and have it initially set to a new Map. NOTE: a Map object stores key-value pairs and remembers the original insertion order of the keys.
+    // const charMap = new Map();
+  // 2. Create a variable that will keep trach of the highest count of any character found in the string.
+    // let max = 0;
+  // 3. Create a variable that will store the character that has the highest count in the string.
+    // let maxChar = '';
+  // 4. Create a for...of loop that iterates over each character (char) in the string (str). The variable (char) will take on each character in the string.
+    // for (const char of str) { ... }
+  // 5. Within the for...of loop, update the character map (charMap) by setting (.set()) the current character (char), retrieving the current count of the character from the character map (charMap.get(char)), increment the count by 1 if the character already exsits, if the character does not exist, set the count to 1.
+    // charMap.set(char, charMap.get(char) + 1 || 1);
+  // 6. Create a second for...of loop that iterates over each entry in the character map (charMap), where char is the character and count is its corresponding count.
+    // for (const [char, count] of charMap) { ... }
+  // 7. Within the for...of loop, create an IF statement that checks if th current count of the character is greater than the current max count (max). If true, update the max to the current count and maxChar to the current character (char).
+    // if (count > max) { max = count; maxChar = char; }
+  // 8. Return the current max character (maxChar) to the end of the function.
+    // return maxChar;
+
+/* Solution #2 - Code */
+const maxCharacter = (str) => {
+  const charMap = new Map();
+  let max = 0;
+  let maxChar = "";
+
+  for (const char of str) {
+    charMap.set(char, charMap.get(char) + 1 || 1);
   }
 
-  for (let char in charMap) {
-    if (charMap[char] > max) {
-      max = charMap[char];
+  for (const [char, count] of charMap) {
+    if (count > max) {
+      max = count;
       maxChar = char;
     }
   }
@@ -59,13 +99,6 @@ const maxCharacter = (str) => {
 };
 
 module.exports = maxCharacter;
-
-/* Solution #1b - Code */
-// const maxCharacter = (str) => {
-  // 
-// };
-
-// module.exports = maxCharacter;
 
 
 /* NOTES */
@@ -87,7 +120,7 @@ module.exports = maxCharacter;
 
 /* SOLUTIONS */
 
-/* Solution #1a - Code */
+/* Solution #1 - Code */
 // const maxCharacter = (str) => {
 //   const charMap = {};
 //   let max = 0;
@@ -108,7 +141,7 @@ module.exports = maxCharacter;
 
 // module.exports = maxCharacter;
 
-/* Solution #1b - Code */
+/* Solution #2 - Code */
 // const maxCharacter = (str) => {
 //   const charMap = new Map();
 //   let max = 0;

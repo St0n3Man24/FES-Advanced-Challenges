@@ -20,17 +20,17 @@
     // add .split('').reverse().join('') to int.toString();
   // 3. Convert the reversed string back to an integer
     // parseInt(reversed);
-  // 4. Multiply the reversed integer by the sign (-) of the original integer
+  // 4. Return the reversed integer and multiply it by the sign (-) of the original integer (int)
     // parseInt(reversed) * Math.sign(int);
 
 /* Solution #1 - Code */
-const reverseInteger = (int) => {
-  const reversed = int.toString().split('').reverse().join('');
+// const reverseInteger = (int) => {
+//   const reversedStr = int.toString().split('').reverse().join('');
+//   const reversedInt = parseInt(reversedStr);
+//   return reversedInt * Math.sign(int);
+// };
 
-  return parseInt(reversed) * Math.sign(int);
-};
-
-module.exports = reverseInteger;
+// module.exports = reverseInteger;
 
 
 /* NOTES */
@@ -52,9 +52,9 @@ module.exports = reverseInteger;
 
 /* Solution #1 - Code */
 // const reverseInteger = (int) => {
-//   const reversed = int.toString().split('').reverse().join('');
-
-//   return parseInt(reversed) * Math.sign(int);
+//   const reversedStr = int.toString().split('').reverse().join('');
+//   const reversedInt = parseInt(reversedStr);
+//   return reversedInt * Math.sign(int);
 // };
 
 // module.exports = reverseInteger;

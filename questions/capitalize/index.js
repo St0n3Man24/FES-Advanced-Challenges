@@ -16,18 +16,23 @@
 // How to target and capitalize the first letter of each word in a string:
 // 1. Create an empty array to hold the capitalized words.
   // const result = [];
-// 2. Create a for loop to iterate through each word in the string that has been split into an array
+// 2. Create a for...of loop to iterate through each word in the string that has been split into an array. NOTE: make sure to put a space in between the quotation marks of the split because we want to split the string by spaces, not by individual characters.
   // for (let word of str.split(" ")) { ... }
 // 3. Inside the for loop, create a variable to hold the capitalized word (capitalizedWord) by targeting the first letter of the word, making it uppercase using the toUpperCase method, and adding the rest of the word to it using the slice method
   // const capitalizedWord = word[0].toUpperCase() + word.slice(1);
 // 4. Push the capitalized word variable (capitalizedWord) into the results array variable (result)
   // result.push(capitalizedWord);
-// 5. Return the updated results array variable (result) and since it's still in array format, use the join method to conver it back to an string
+// 5. Return the updated results array variable (result) and since it's still in array format, use the join method to conver it back to an string. NOTE: make sure to put a space in between the quotation marks of the join because we want to join the words with spaces.
   // return result.join(" ");
 
 /* Solution #1 - Code */
 const capitalize = (str) => {
-  
+  const array = [];
+  for (let word of str.split(' ')) {
+    const capitalizedWord = word[0].toUpperCase() + word.slice(1);
+    array.push(capitalizedWord);
+  }
+  return array.join(' ');
 };
 
 module.exports = capitalize;

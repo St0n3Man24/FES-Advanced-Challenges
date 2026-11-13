@@ -22,16 +22,16 @@
     // if (str === reverseString) { return true } else { return false }
 
 /* Solution #1 - Code */
-  // const palindrome = (str) => {
-  //   const reverseString = str.split('').reverse().join('');
-  //   if (str === reverseString) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // };
+// const palindrome = (str) => {
+//   const reversedString = str.split('').reverse().join('');
+//   if (str === reversedString) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
-  // module.exports = palindrome;
+// module.exports = palindrome;
 
 /* Solution #2 - Instructions */
 // Comparing the original string with its reversed version to determine if it's a palindrome by using a helper function (reversedString) to reverse the string. Then, we check if the original string is equal to the reversed strings function.
@@ -43,15 +43,15 @@
     // return str === reversedString(str);
 
 /* Solution #2 - Code */
-  // const palindrome = (str) => {
-  //   return str === reverseString(str);
-  // };
+// const palindrome = (str) => {
+//   return str === reverseString(str);
+// };
 
-  // const reverseString = (str) => {
-  //   return str.split('').reverse().join('');
-  // }
+// function reverseString(str) {
+//   return str.split('').reverse().join('');
+// }
 
-  // module.exports = palindrome;
+// module.exports = palindrome;
 
 /* Solution #3 - Instructions */
 // Checking if the given string is a palindrome by using the Every method to compare each character with its corresponding character from the end. We are turning the string into an array of characters and then checking if each character matches the character at the mirrored position from the end.
@@ -67,7 +67,7 @@
 // 1. Create a variable that targets the first half of the strings length. NOTE: we check half the string length because for a string to be a palindrome the first half of the string must match the second half. 
   // const firstHalf = Math.floor(str.length / 2);
 // 2. Create a FOR loop that iterates through the first half of a string
-  // for (i = 0; i < firstHalf; i++) { ... }
+  // for (let i = 0; i < firstHalf; i++) { ... }
 // 3. Create a variable inside the loop that calculates the opposite character/index from the current one you're on.
   // const oppositeIndex = str.length - 1 - i;
   // Ex: if i = 0, str.length = 5, str = 'Hello'; then the oppositeIndex would be 5 - 1 - 0 = 4 which indicates that 'H' (i = 0) is opposite of 'o' (i = 4).
@@ -77,18 +77,20 @@
   // const palindrome = (str) => { const firstHalf; for (...) {...} return true; }
 
 /* Solution #4 - Code */
-// const palindrome = (str) => {
-//   const firstHalf = Math.floor(str.length / 2);
-//   for (let i = 0; i < firstHalf; i++) {
-//     const oppositeIndex = str.length - 1 - i;
-//     if (str[i] !== str[oppositeIndex]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// };
+const palindrome = (str) => {
+  const firstHalf = Math.floor(str.length / 2);
 
-// module.exports = palindrome;
+  for (let i = 0; i < firstHalf; i++) {
+    const oppositeCharacter = str.length - 1 - i;
+    if (str[i] !== str[oppositeCharacter]) {
+    // if the string at index i is not equal to the index of the string at the opposite position to the initial index position within the string then it is not a palidrome and we return false. Otherwise, it's true, meaning it is a palindrome.
+      return false;
+    }
+  }
+  return true;
+};
+
+module.exports = palindrome;
 
 
 /* NOTES */

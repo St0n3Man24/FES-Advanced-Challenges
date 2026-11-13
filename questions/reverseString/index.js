@@ -35,11 +35,11 @@
 // };
 
 /* Solution #1a - Code */
-// const reverseString = (str) => {
-//   return str.split('').reverse().join('');
-// }
+const reverseString = (str) => {
+  return str.split('').reverse().join('');
+}
 
-// module.exports = reverseString;
+module.exports = reverseString;
 
 /* Solution #1b - Code */
 // const reverseString = (str) => {
@@ -62,9 +62,7 @@
 
 /* Solution #2 - Code */
 // const reverseString = (str) => {
-//   return str
-//     .split('')
-//     .reduce((accumulator, currentValue) => (currentValue + accumulator), '');
+
 // }
 
 // module.exports = reverseString;

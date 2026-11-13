@@ -47,8 +47,8 @@
 
 /* Solution #1 - Code */
 // const anagrams = (strA, strB) => {
-//   const charMapA = buildCharMap(strA);
-//   const charMapB = buildCharMap(strB);
+//   const charMapA = characterMap(strA);
+//   const charMapB = characterMap(strB);
 
 //   if (charMapA.size !== charMapB.size) {
 //     return false;
@@ -62,18 +62,18 @@
 //   return true;
 // };
 
-// const buildCharMap = (str) => {
+// function characterMap(str) {
 //   const charMap = new Map();
-
 //   for (const char of convertedString(str)) {
-//     charMap.set(char, charMap.get(char) + 1 || 1);
+//     charMap.set(char, charMap.get(char) + 1 || 1)
+//     // We are using the set method to store a key value in the Map object (charMap) and the key we are storing is the char. We are retrieving the current value associated with the key (char) in the charMap by using the get method. If the key (char) has been seen before, this will return the current count of that character, otherwise it will return undefined. By adding 1 we are saying if charMap.get(char) returns a number, meaning the count of how many times char has been seen, it will add 1 to that count which effectively increments the count of the character by one. We use an OR operator followed by 1 because if the left side of the operator (charMap.get(char) + 1) result is a falsy value like undefined, meaning the char has not been added to the charMap before, then the right side of the operation will run which initializes the count of that char to 1.
 //   }
 //   return charMap;
-// }
+// };
 
-// const convertedString = (str) => {
-//   return str.toLowerCase().replaceAll(' ', '');
-// }
+// function convertedString(str) {
+//   return str.toLowerCase().replaceAll(' ', '')
+// };
 
 // module.exports = anagrams;
 
@@ -102,14 +102,14 @@
   // 3. return a comparison of the convertedString function passing in both strings as arguments (strA and strB) to check if they are equal.
     // return convertedString(strA) === convertedString(strB);
 
-/* Solution #2 - Code */
+/* Solution #2 - Code */ /* THIS IS THE BEST METHOD */
 const anagrams = (strA, strB) => {
   return convertedString(strA) === convertedString(strB);
 };
 
-const convertedString = (str) => {
+function convertedString(str) {
   return str.toLowerCase().replaceAll(' ', '').split('').sort().join('');
-}
+};
  
 module.exports = anagrams;
 

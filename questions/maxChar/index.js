@@ -24,7 +24,7 @@
     // let max = 0;
   // 3. Create a variable that will change and store the character that has the highest count that is initially set to an empty string ('').
     // let maxChar = '';
-  // 4. Counting Characters: create a for...of loop that iterates over each character in the string (str) and have the variable (char) take on the value of each character in the string.
+  // 4. Counting Characters: create a for...of loop that iterates over each character in the string (str) and have the key (char) take on the value of each character in the string.
     // for (let char of str) { ... }
   // 5. Within the for...of loop, we want to update the count of each character (char) in the empty (charMap) object. Using the OR operator, if charMap[char] already exists (meaning the character has been encountered before), it increments by 1 (charMap[char] + 1). If charMap[char] does not exist (meaning the character is being encountered for the first time) it sets the count to 1.
     // charMap[char] = charMap[char] + 1 || 1;
@@ -64,9 +64,9 @@
 // Use Map object to create a character map:
   // 1. Create variable that will store the character Map object and have it initially set to a new Map. NOTE: a Map object stores key-value pairs and remembers the original insertion order of the keys.
     // const charMap = new Map();
-  // 2. Create a variable that will keep trach of the highest count of any character found in the string.
+  // 2. Create a variable that will keep trach of the highest count of any character found in the string and have it initially set to 0.
     // let max = 0;
-  // 3. Create a variable that will store the character that has the highest count in the string.
+  // 3. Create a variable that will store the character that has the highest count in the string and have it initially set to an empty string.
     // let maxChar = '';
   // 4. Create a for...of loop that iterates over each character (char) in the string (str). The variable (char) will take on each character in the string.
     // for (const char of str) { ... }
@@ -74,7 +74,7 @@
     // charMap.set(char, charMap.get(char) + 1 || 1);
   // 6. Create a second for...of loop that iterates over each entry in the character map (charMap), where char is the character and count is its corresponding count.
     // for (const [char, count] of charMap) { ... }
-  // 7. Within the for...of loop, create an IF statement that checks if th current count of the character is greater than the current max count (max). If true, update the max to the current count and maxChar to the current character (char).
+  // 7. Within the for...of loop, create an IF statement that checks if the current count of the character is greater than the current max count (max). If true, update the max to the current count and maxChar to the current character (char).
     // if (count > max) { max = count; maxChar = char; }
   // 8. Return the current max character (maxChar) to the end of the function.
     // return maxChar;
@@ -83,13 +83,16 @@
 const maxCharacter = (str) => {
   const charMap = new Map();
   let max = 0;
-  let maxChar = "";
+  let maxChar = '';
 
   for (const char of str) {
+  // this loop starts by iterating over each character (char) in the string (str). the for...of syntax allows you to easily access each character one at a time and (char) is used as the variable that represents the current character during each iteration.
     charMap.set(char, charMap.get(char) + 1 || 1);
+    // We set a key-value pair where the character (char) is the key and the value is determined by the expression after the comma.. charMap.get(char) retrieves the current count of how many times the character (char) has been seen so far. if (char) has not been encountered before, this will return undefined. If charMap.get(char) is a number, indicating that the character has been counted before, then the expression (charMap.get(char) + 1) increments that count by 1. If charMap.get(char) is undefined, meaning it's the first encounter of the character (char), then the expression (charMap.get(char) + 1) will result in (NaN) since you can't add a number to undefined. So, (|| 1) ensures that if the first part is falsey (charMap.get(char) + 1), it falls back to 1 and this is the first time the character is being counted.
   }
 
   for (const [char, count] of charMap) {
+  // this loop iterates over each entry in the (charMap) and each entry consists of a key value pair where the key is set to (char) and the value is set to (count).
     if (count > max) {
       max = count;
       maxChar = char;

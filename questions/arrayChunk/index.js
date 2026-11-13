@@ -35,12 +35,13 @@
 
 /* Solution #1 - Code */
 const arrayChunk = (array, size) => {
-  const chunkedArray = [];
+  const chunkArray = [];
   for (let i = 0; i < array.length; i += size) {
     const subarray = array.slice(i, i + size);
-    chunkedArray.push(subarray);
+    // if i (index) is 0 so the initial index and size of chunk is 2, then array.slice(i, i + size) is array.slice(0, 2) which if we have an array of [B, E, N], then array.slice(0, 2) would return [B, E].
+    chunkArray.push(subarray);
   }
-  return chunkedArray;
+  return chunkArray;
 };
 
 module.exports = arrayChunk;

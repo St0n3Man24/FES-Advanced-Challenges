@@ -24,13 +24,13 @@
     // parseInt(reversed) * Math.sign(int);
 
 /* Solution #1 - Code */
-// const reverseInteger = (int) => {
-//   const reversedStr = int.toString().split('').reverse().join('');
-//   const reversedInt = parseInt(reversedStr);
-//   return reversedInt * Math.sign(int);
-// };
+const reverseInteger = (int) => {
+  const convertedInt = int.toString().split('').reverse().join('');
+  const reveresedInt = parseInt(convertedInt) * Math.sign(int);
+  return reveresedInt;
+};
 
-// module.exports = reverseInteger;
+module.exports = reverseInteger;
 
 
 /* NOTES */

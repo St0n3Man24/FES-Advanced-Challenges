@@ -27,12 +27,13 @@
 
 /* Solution #1 - Code */
 const capitalize = (str) => {
-  const array = [];
+  const capitalizedWordsArray = [];
   for (let word of str.split(' ')) {
-    const capitalizedWord = word[0].toUpperCase() + word.slice(1);
-    array.push(capitalizedWord);
+    const capitalizedWords = word[0].toUpperCase() + word.slice(1);
+    // First we are taking a string (str) and splitting it into an array of words based on spaces. For example, if we have a string (str) that is set to ("hello world") and state str.split(' '), we will get an array that would be set to ["hello", "world"]. In the for...of loop we are iterating over each element (word) in the array that was produced with the split. The variable word will represent each individual word during each iteration of the loop. Within the loop, we are capitalizing the first letter of each (word). word[0].toUpperCase() retrieves the first character of the word and converts it to uppercase. word.slice(1) gets the rest of the word starting from the second character (index 1) to the end. Then we add the rest of the word (word.slice(1)) to the end of the capitalized initial letter of the word (word[0].toUpperCase()).
+    capitalizedWordsArray.push(capitalizedWords);
   }
-  return array.join(' ');
+  return capitalizedWordsArray.join(' ');
 };
 
 module.exports = capitalize;
